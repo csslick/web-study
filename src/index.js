@@ -1,25 +1,31 @@
 import Header from './components/header';
-
-const doc_data = [
-    { url: './docs/2019-0905' }
-]
+import $ from 'jquery';
+import docs from './docs';  // 문서
 
 const App = document.getElementById('app');
 let html = '';
+
 html += Header;
-console.log(doc_data[0].url);
+// 문서 추가
+for (var i in docs){
+    html += docs[i];
+}
+console.log(docs);
 
-fetch(doc_data[0].url).then((res) => {
-    if(res.status == '404'){
-        return console.log('server load error')
-    }
-    res.text()
-        .then((text) => {
-            // html += text;    
-            console.log(text);
-            App.innerHTML = text;        
-        })
-})
+// $.ajax({
+//   url: './src/test.json',
+//   success: function(data){
+//     console.log('jquery load = ' + data);
+//   },
+//   error: function(){
+//     console.log('error')
+//   }
+// })
+fetch('./test.json')
+    .then(res => res.text())
+    .then(data => console.log(data))
 
 
-console.log('index.js');
+App.innerHTML = html;  
+
+
