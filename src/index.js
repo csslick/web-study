@@ -1,6 +1,6 @@
 import Header from './components/header';
 import $ from 'jquery';
-import docs from './docs';  // 문서
+// import docs from './docs';  // 문서
 
 const App = document.getElementById('app');
 let html = '';
