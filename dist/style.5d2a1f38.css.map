@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,QACI,qBAAsB,CACtB,WAAY,CACZ,mBACJ","file":"style.5d2a1f38.css","sourceRoot":"..","sourcesContent":["section{\r\n    border: 1px solid #ccc;\r\n    padding: 1em;\r\n    margin-bottom: 100px;\r\n}"]}
