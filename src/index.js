@@ -12,16 +12,6 @@ let html = '';
 // }
 // console.log(docs);
 
-// $.ajax({
-//   url: './src/test.json',
-//   success: function(data){
-//     console.log('jquery load = ' + data);
-//   },
-//   error: function(){
-//     console.log('error')
-//   }
-// })
-
 const url = [
     "https://csslick.github.io/web-study-docs/docs/2019-0910.html",
     "https://csslick.github.io/web-study-docs/docs/2019-0909.html",
@@ -29,21 +19,33 @@ const url = [
 ]
 
 const insertContents = function(_url){
-    return fetch(_url)
-            .then(res => res.text())
-            .then(data => {
-                console.log(data)
-                html += data;
-                App.innerHTML = html;  
-            })
+    // return fetch(_url)
+    //         .then(res => res.text())
+    //         .then(data => {
+    //             // console.log(data)
+    //             html += data;
+    //             App.innerHTML = html;  
+    //         })
+
+    $.ajax({
+        url: _url,
+        async: false,
+        success: function (data) {
+            console.log('jquery load = ' + data);
+            html += data;
+            // App.innerHTML = html; 
+        },
+        error: function () {
+            console.log('error')
+        }
+    })
 }
 
 html += Header;
 for (let i in url){
     insertContents(url[i]);
 }
-
-
+App.innerHTML = html; 
 
 
 
