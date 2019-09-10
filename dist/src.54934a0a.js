@@ -11,7 +11,7 @@ var e,t=arguments[3],n=require("process");!function(e,t){"use strict";"object"==
 },{"process":"JLl0"}],"sP1H":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=r(require("./docs/2019-0909.html")),t=r(require("./docs/2019-0910.html"));function r(e){return e&&e.__esModule?e:{default:e}}var d={doc2019_0910:t.default,doc2019_0909:e.default};exports.default=d;
 },{"./docs/2019-0909.html":"8y3h","./docs/2019-0910.html":"X9Lv"}],"H99C":[function(require,module,exports) {
-"use strict";var e=r(require("./components/header")),t=r(require("jquery")),n=r(require("./docs"));function r(e){return e&&e.__esModule?e:{default:e}}var u=document.getElementById("app"),o="";for(var l in o+=e.default,n.default)o+=n.default[l];console.log(n.default),fetch("./test.json").then(function(e){return e.text()}).then(function(e){return console.log(e)}),u.innerHTML=o;
+"use strict";var t=c(require("./components/header")),e=c(require("jquery")),s=c(require("./docs"));function c(t){return t&&t.__esModule?t:{default:t}}var o=document.getElementById("app"),u="",n=["https://csslick.github.io/web-study-docs/docs/2019-0910.html","https://csslick.github.io/web-study-docs/docs/2019-0909.html","https://csslick.github.io/web-study-docs/docs/2019-0906.html"],r=function(t){return fetch(t).then(function(t){return t.text()}).then(function(t){console.log(t),u+=t,o.innerHTML=u})};for(var i in u+=t.default,n)r(n[i]);
 },{"./components/header":"OzNB","jquery":"HlZQ","./docs":"sP1H"}],"gjc+":[function(require,module,exports) {
 var t=null;function e(){return t||(t=n()),t}function n(){try{throw new Error}catch(e){var t=(""+e.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);if(t)return r(t[0])}return"/"}function r(t){return(""+t).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^\/]+$/,"$1")+"/"}exports.getBundleURL=e,exports.getBaseURL=r;
 },{}],"h1Re":[function(require,module,exports) {
@@ -21,4 +21,4 @@ module.exports=function(t){return fetch(t).then(function(t){return t.text()})};
 },{}],0:[function(require,module,exports) {
 var b=require("h1Re");b.register("html",require("FnZc"));b.load([["2019-0909.ca576cce.html","8y3h"],["2019-0910.cf8f80e2.html","X9Lv"]]).then(function(){require("H99C");});
 },{}]},{},[0], null)
-//# sourceMappingURL=src.85cf546d.js.map
+//# sourceMappingURL=src.54934a0a.js.map
